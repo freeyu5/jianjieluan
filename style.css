@@ -47,7 +47,7 @@ ul {list-style: none;}
     .business {display: none;}
     .businessShow {display: block;}
     .fold {display: flex;}
-    .shut {position: fixed;z-index: 50;top: 0;left: -100%;width: 100%;height: auto;background-color: beige;}
+    .shut {position: fixed;z-index: 50;top: 0;bottom: 0;left: -100%;width: 100%;height: auto;background-color: beige;}
     .menu {position: absolute;z-index: 100;top: 0;left: 0;width: 100%;padding-top: 200px;flex-direction: column;text-align: center;}
     .menu li {color: black;padding: 20px 0;}
     .head-con {background-color: white;box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2)}
