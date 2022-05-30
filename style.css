@@ -1,60 +1,61 @@
-*{box-sizing: border-box;padding: 0;margin: 0;}
-/* *::-webkit-scrollbar {text-decoration: none;} */
+* {box-sizing: border-box;margin: 0;padding: 0;}
+a {text-decoration: none;color: black;}
+ul {list-style: none;}
+.head-con {position: sticky;z-index: 100;top: 0;height: 69.73px;background-color: #00f6ff;box-shadow: 0px 2px 6px 3px rgba(0, 0, 0, 0.2)}
+.CON {position: relative;max-width: 980px;margin: auto;}
+.head {display: flex;align-items: flex-end;justify-content: space-between;}
+.logo-con {padding: 8px 12px;}
+.logo {width: 80px;}
+.menu {display: flex;font-size: 18px;}
+.menu li {padding:8px 22px;color: white;font-weight: bold;}
 
-ul{list-style-type: none;}
-a{text-decoration: none;}
-a{color: black;}
-div{font-size: 0px;}
-.CON{max-width: 980px;margin:auto;}
-.header_con{
-    position:relative;
-    display: flex;
-}
-.header_con > ul {
-    font-size: 18px;
-    display: flex;
-    position: absolute;
-    right: 0px;
-    bottom: 0px;
-}
-.header_con > ul > a > li {
-    padding:8px 20px;
-    width: 112px;
-    text-align: center;
-}
-.header_con > ul > a > li:hover{
-    color: aqua;
-}
-.icon_con {
-    position: relative;
-    display: flex;
-    align-items: center;
-    width: 200px;
-}
-.icon_con > h2 {
-    margin-left: 10px;
-    font-size: 24px;
-}
-.icon_con > h2 :first-child{
-    position: absolute;
-    top: 5px;
-
-}
-.icon_con > h2 :last-child{
-    position:absolute;
-    bottom: 5px;
-}
-.icon_con > img {
-    width: 150px;
-}
-/*         header_end */
-
-/*         img_con start */
-.img_con {
-    width: 100%;
-
-}
-.img_con > div > img {
+.business {position: relative;}
+.businessShow {display: none;}
+.downline {position: absolute;bottom: 3px;left: 50%;transform: translateX(-50%);width: 40%;height: 2px;background-color: rgb(255, 255, 255);border-radius: 2px;box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.1)}
+.business ul {display: none;position: absolute;top: 41px;left: 50%;transform: translateX(-50%);width: 92px;background-color: #00f6ff;box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2);}
+.business li {font-size: 16px;padding: 10px 8px;text-align: center;}
+.business li:hover{background-color: #00dee6;}
+.busiLineShow {animation-name: businessLineShow;animation-duration: 1s;animation-direction: alternate;animation-iteration-count: infinite;}
+.foldMenuShow {animation: showFoldMenu 1s both;}
+.foldMenuHidden {animation: hiddenFoldMenu 1s both;}
+.fold {display: none;flex-direction: column;justify-content: space-around;position: absolute;z-index: 49;right: 10px;top: 50%;transform: translateY(-50%);width: 38px;height: 38px;}
+.fold div {width: 100%;height: 5px;background-color: #00f6ff;}
+.headContent {transform: matrix(1, 0, 0, 1, 0, 0);position: relative;z-index: -100;}
+.headContent video {
     width: 100%;
     height: 100%;
+    object-fit: cover;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;}
+/*     ------ */
+    .shortVideos-con {width: 100%;background-color: #00dee6;}
+    .CON-mandp {padding: 90px 20px 190px 20px;z-index: -0;}
+    .CON-mandp > h2 {font-size: 48px;padding: 0 0 88px 0;}
+/*     ------ */
+    .staff {display: flex;flex-wrap: wrap;justify-content: space-between;}
+    .staff > div{height: 270px;width: 270px;box-shadow: -2px 2px 5px 5px rgba(255, 255, 255, 0.4);text-align: center;}
+@keyframes businessLineShow{0%{opacity: 1;width: 60%;}100%{opacity: 0.7;width: 40%;}}
+@keyframes showFoldMenu {0%{left: -100%;}100%{left: 0%;}}
+@keyframes hiddenFoldMenu {0%{left: 0%;}100%{left: -100%;}}
+/*         宅屏设备显示  */
+@media screen and (max-width:980px) {
+    .downline {display: none;}
+    .business {display: none;}
+    .businessShow {display: block;}
+    .fold {display: flex;}
+    .shut {position: fixed;z-index: 50;top: 0;left: -100%;width: 100%;height: auto;background-color: beige;}
+    .menu {position: absolute;z-index: 100;top: 0;left: 0;width: 100%;padding-top: 200px;flex-direction: column;text-align: center;}
+    .menu li {color: black;padding: 20px 0;}
+    .head-con {background-color: white;box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2)}
+    .logo-con {padding: 16px 12px;}
+    .logo-con > img {content: url("img/LOGO.png");}
+/*             .headContent video {display: none;}
+    .headContent  {background: url("img/bj.jpg");background-size: cover;} */
+    .logo  {width: 56px;}
+    .CON-mandp > h2 {text-align: center;}
+    .staff > div {width: 100%;margin: 0 0 48px 0;}
 }
