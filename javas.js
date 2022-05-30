@@ -34,7 +34,8 @@
             }
         }
         shut.addEventListener('click',foldMenuHidden);
-        function foldMenuHidden(){
+        shut.addEventListener('touchmove',foldMenuHidden);
+        function foldMenuHidden(e){
             if (isClick){
                 shut.classList.remove("foldMenuShow");
                 shut.classList.add("foldMenuHidden");
@@ -43,6 +44,9 @@
                     shut.style.height = 'auto';
                     isClick = true;
                 }, 1000);
+            }
+            if (e.type == 'touchmove') {
+                e.preventDefault();
             }
         }
         headContent.style.height = (docH-69.73) + 'px';
