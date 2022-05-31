@@ -50,3 +50,8 @@
             }
         }
         headContent.style.height = (docH-69.73) + 'px';
+
+        var officialWeb = document.getElementById('official');
+        var officialWebW = parseInt(getComputedStyle(officialWeb).width);
+        
+        console.log(officialWebW)
