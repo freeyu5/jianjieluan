@@ -33,11 +33,17 @@ ul {list-style: none;}
     z-index: -1;}
 /*     ------ */
     .shortVideos-con {width: 100%;background-color: #00dee6;}
-    .CON-mandp {padding: 90px 20px 190px 20px;z-index: -0;}
-    .CON-mandp > h2 {font-size: 48px;padding: 0 0 88px 0;}
+    .CON-mandp {padding: 90px 20px 140px 20px;z-index: -0;}
+    .CON-mandp > h2 {font-size: 48px;color: white;padding: 0 0 88px 0;}
 /*     ------ */
     .staff {display: flex;flex-wrap: wrap;justify-content: space-between;}
-    .staff > div{height: 270px;width: 270px;box-shadow: -2px 2px 5px 5px rgba(255, 255, 255, 0.4);text-align: center;}
+    .staff > div{height: 270px;width: 270px;font-size: 55px;color: white;box-shadow: -2px 2px 5px 8px rgba(255, 255, 255, 0.7);text-align: center;}
+    .staff h3 {font-size: 28px;}
+    .staff p {position: relative;top: 50%;transform: translateY(-50%);font-size: 48px;}
+    .staff a {color: white;text-decoration: revert;}
+    .staff img {margin: 25px auto 25px auto;height: 45%;}
+    .staff > div:first-child{background-color: black;}
+    .staff > div:nth-child(2){background-color: #ff4906;}
 @keyframes businessLineShow{0%{opacity: 1;width: 60%;}100%{opacity: 0.7;width: 40%;}}
 @keyframes showFoldMenu {0%{left: -100%;}100%{left: 0%;}}
 @keyframes hiddenFoldMenu {0%{left: 0%;}100%{left: -100%;}}
@@ -47,8 +53,8 @@ ul {list-style: none;}
     .business {display: none;}
     .businessShow {display: block;}
     .fold {display: flex;}
-    .shut {position: fixed;z-index: 50;top: 0;bottom: 0;left: -100%;width: 100%;height: auto;background-color: beige;}
-    .menu {position: absolute;z-index: 100;top: 0;left: 0;width: 100%;padding-top: 200px;flex-direction: column;text-align: center;}
+    .shut {position: fixed;z-index: 50;bottom: 0;left: -100%;width: 100%;height: auto;background-color: beige;}
+    .menu {position: absolute;z-index: 100;top: 50%;left: 0;width: 100%;flex-direction: column;text-align: center;}
     .menu li {color: black;padding: 20px 0;}
     .head-con {background-color: white;box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2)}
     .logo-con {padding: 16px 12px;}
@@ -58,4 +64,5 @@ ul {list-style: none;}
     .logo  {width: 56px;}
     .CON-mandp > h2 {text-align: center;}
     .staff > div {width: 100%;margin: 0 0 48px 0;}
+
 }

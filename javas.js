@@ -24,7 +24,7 @@
         var isClick = true;
         function foldMenuShow(){
             if (isClick){
-                shut.style.height = docH + 'px';
+                shut.style.height = docH + 200 + 'px';
                 shut.classList.remove("foldMenuHidden");
                 shut.classList.add("foldMenuShow");
                 isClick = false;
